@@ -1,0 +1,45 @@
+find frequency of characters in a string
+import java.util.Scanner;
+
+public class Strings {
+
+	public static void main(String[] args) {
+		String str;
+		Scanner ip = new Scanner(System.in);
+		System.out.print("Enter a string: ");
+		str = ip.nextLine();
+		int[] arr = new int[256]; // eventhough 122 is enough :/
+		for (int i = 0; i < str.length(); i++) {
+			arr[str.charAt(i)]++;
+		}
+		System.out.println("The frequency of characters: ");
+		for (int i = 0; i < 256; i++) {
+			if (arr[i] > 0)
+				System.out.println((char) i + ": " + arr[i]);
+		}
+		ip.close();
+	}
+}
+
+
+OUTPUT:
+Enter a string: //find frequency of characters in a string
+The frequency of characters: 
+ : 6
+/: 2
+a: 3
+c: 3
+d: 1
+e: 3
+f: 3
+g: 1
+h: 1
+i: 3
+n: 4
+o: 1
+q: 1
+r: 4
+s: 2
+t: 2
+u: 1
+y: 1
